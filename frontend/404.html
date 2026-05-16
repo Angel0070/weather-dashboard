@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Dashboard</title>
+    <script>
+      // Берём путь после имени репозитория
+      var repoName = '/weather-dashboard';
+      var path = window.location.pathname.replace(repoName, '');
+      window.location.replace(repoName + '/?p=' + encodeURIComponent(path));
+    </script>
+  </head>
+  <body></body>
+</html>

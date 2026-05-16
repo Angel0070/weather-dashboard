@@ -9,5 +9,15 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        var path = params.get('p');
+        if (path) {
+          var repoName = '/weather-dashboard';
+          window.history.replaceState(null, '', repoName + path);
+        }
+      })();
+    </script>
   </body>
 </html>
